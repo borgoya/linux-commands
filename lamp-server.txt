@@ -1,0 +1,6 @@
+1. To start the apache server
+      sudo start apache2 start
+2. To start the mysql server
+      sudo service mysql start
+3. To enter into mysql command prompt
+      mysql -p ->then enter the password to enter into mysql command-line interface
