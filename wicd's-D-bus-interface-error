@@ -1,0 +1,17 @@
+Could not connect to wicd's D-Bus interface
+
+    That error should not influence your connectivity, however this is the fix to it:
+    Code:
+
+    root@evilbox:~# dpkg-reconfigure wicd
+    root@evilbox:~# update-rc.d wicd defaults
+     Adding system startup for /etc/init.d/wicd ...
+       /etc/rc0.d/K20wicd -> ../init.d/wicd
+       /etc/rc1.d/K20wicd -> ../init.d/wicd
+       /etc/rc6.d/K20wicd -> ../init.d/wicd
+       /etc/rc2.d/S20wicd -> ../init.d/wicd
+       /etc/rc3.d/S20wicd -> ../init.d/wicd
+       /etc/rc4.d/S20wicd -> ../init.d/wicd
+       /etc/rc5.d/S20wicd -> ../init.d/wicd
+    root@evilbox:~#
+
