@@ -1,0 +1,19 @@
+This method worked for me.....just have a try...
+
+check the file /etc/apt/apt.conf
+
+The contents were,
+
+Acquire::http::proxy "http://<proxy>:<port>/";
+Acquire::ftp::proxy "ftp://<proxy>:<port>/";
+Acquire::https::proxy "https://<proxy>:<port>/";
+
+This was the reason why you could reach proxy but couldn't get past it, since there is no username password information. So just put that info into it..
+
+Acquire::http::proxy "http://<username>:<password>@<proxy>:<port>/";
+Acquire::ftp::proxy "ftp://<username>:<password>@<proxy>:<port>/";
+Acquire::https::proxy "https://<username>:<password>@<proxy>:<port>/";
+
+save the file and you are done...
+
+BROTIP: More better add these lines in another file, /etc/apt/apt.conf.d/80proxy. This will ensure that after a version upgrade changes won't be lost.
