@@ -1,0 +1,7 @@
+If you need number every time you start vi/vim, append following line to your ~/.vimrc file:
+vi ~/.vimrc
+Append the following line:
+set number
+
+Append the following line for syntax colors:
+syntax on
