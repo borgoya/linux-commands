@@ -1,0 +1,64 @@
+This method is not recommended!
+
+While using this method will still work fine, and you will end up with the latest version of LibreOffice, LibreOffice 4.2 is now available in the Trusty repositories and the recommended method of installation is using the software center or apt.
+
+If you want to live on the wild side, or you want the absolute latest and greatest version of LibreOffice use this answer.
+
+If you find something out of date, please leave a comment below or go ahead and fix it yourself :)
+
+Start by downloading it:
+
+    Direct torrent link: LibreOffice 4.3.4 torrent 64 bit or LibreOffice 4.3.4 torrent 32 bit
+
+    Normal installer direct link: LibreOffice 4.3.4 normal installer 64 bit or LibreOffice 4.3.0 normal installer 32 bit
+
+I recommend the torrent for faster download speed and for slow connections.
+
+To install LibreOffice 4 you will need to remove all previous versions. Run:
+
+sudo apt-get remove --purge libreoffice-core libreoffice-common
+sudo apt-get autoremove --purge
+
+Note: I'm not 100% sure this will remove all of LibreOffice. If you experience any errors later, please let me know.
+Extract the files:
+
+    cd to the Downloads directory:
+
+    cd Downloads  
+
+    Extract the tar.gz:
+
+    For 64 bit:
+
+    tar -xvzf LibreOffice_4.3.4_Linux_x86-64_deb.tar.gz  
+
+    For 32 bit:
+
+    tar -xvzf LibreOffice_4.3.4_Linux_x86_deb.tar.gz
+
+Install the program:
+
+    cd to the programs folder:
+
+    For 64 bit:
+
+    cd LibreOffice_4.3.4_Linux_x86-64_deb/DEBS  
+
+    For 32 bit:
+
+    cd LibreOffice_4.3.4_Linux_x86_deb/DEBS
+
+    Install part one (for both 32 and 64 bit):
+
+    sudo dpkg -i *.deb
+
+You're done! You can now remove both the directory and the tarball:
+
+rm -r ~/Downloads/LibreOffice_4.3.4_Linux_x86-64_deb 
+rm ~/Downloads/LibreOffice_4.3.4_Linux_x86-64_deb.tar.gz
+
+Go add the re-add the applications to your launcher!
+
+Some Kubuntu users will need to run this command to fix how LibreOffice 4 looks in KDE:
+
+sudo mv /opt/libreoffice/ure/lib/libstdc++.so.6 /opt/libreoffice/ure/lib/libstdc++.so.6.old 
