@@ -5,3 +5,6 @@ set number
 
 Append the following line for syntax colors:
 syntax on
+
+$ cd
+$ vi .vimrc
