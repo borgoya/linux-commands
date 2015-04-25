@@ -1,5 +1,6 @@
-# backtrack-help
-Linux Backtrack r3 help
+# Kali Linux help
+
+Kali Linux help
 
 1. How to install
 2. Managing wi-fi setting
